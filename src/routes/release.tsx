@@ -240,7 +240,7 @@ function ReleasePage() {
           <Field id="credit" label="Credit name. Leave blank for no public credit." value={fields.credit} onChange={(v) => set("credit", v)} />
           <div className="grid gap-4 sm:grid-cols-2">
             <Field id="email" label="Email" type="email" value={fields.email} onChange={(v) => set("email", v)} autoComplete="email" />
-            <Field id="phone" label="Phone, if you want one on the form" value={fields.phone} onChange={(v) => set("phone", v)} autoComplete="tel" />
+            <Field id="phone" label="Phone, if you want one on the form" type="tel" value={fields.phone} onChange={(v) => set("phone", v)} autoComplete="tel" />
           </div>
           <Field id="address" label="Address" value={fields.address} onChange={(v) => set("address", v)} autoComplete="street-address" />
           <label className="block text-sm" htmlFor="role">

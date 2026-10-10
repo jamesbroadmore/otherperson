@@ -125,7 +125,12 @@ function SarahEpisode() {
 
   const captionIndex = length > 0 ? Math.min(lines.length - 1, Math.floor((time / length) * lines.length)) : 0;
   const caption = lines[captionIndex];
-  const progress = length > 0 ? Math.round((time / length) * 100) : 0;
+  const progress = length > 0 ? Math.min(100, Math.round((time / length) * 100)) : 0;
+
+  function handleAudioError() {
+    setPlaying(false);
+    setAudioError("The recording is unavailable right now. Try again shortly.");
+  }
 
   return (
     <main className="min-h-screen bg-[#10100f] pb-24 text-[#e7e1d4] selection:bg-[#c4a574] selection:text-[#14110c]">
@@ -142,7 +147,7 @@ function SarahEpisode() {
               ref={audio}
               src="https://bcd4a909db0d.jellypod.com/episodes/02ee6280-1c89-4e17-ab8c-e6af6bc1f455"
               preload="metadata"
-              onError={() => setAudioError("The recording is unavailable right now. Try again shortly.")}
+              onError={handleAudioError}
             />
             <div className="flex items-center justify-between gap-4">
               <button type="button" onClick={toggle} className="min-h-11 min-w-24 bg-[#e7e1d4] px-5 text-xs uppercase tracking-[0.18em] text-[#14110c]" aria-label={playing ? "Pause episode" : "Play episode"}>
