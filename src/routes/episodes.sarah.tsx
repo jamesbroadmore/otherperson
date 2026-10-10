@@ -72,14 +72,27 @@ function SarahEpisode() {
     const el = audio.current;
     if (!el) return;
     const onTime = () => setTime(el.currentTime);
-    const onMeta = () => setLength(el.duration || 676);
+    const onMeta = () => {
+      if (Number.isFinite(el.duration) && el.duration > 0) setLength(el.duration);
+    };
+    const onPlay = () => {
+      setAudioError("");
+      setPlaying(true);
+    };
+    const onPause = () => setPlaying(false);
     const onEnd = () => setPlaying(false);
     el.addEventListener("timeupdate", onTime);
     el.addEventListener("loadedmetadata", onMeta);
+    el.addEventListener("durationchange", onMeta);
+    el.addEventListener("play", onPlay);
+    el.addEventListener("pause", onPause);
     el.addEventListener("ended", onEnd);
     return () => {
       el.removeEventListener("timeupdate", onTime);
       el.removeEventListener("loadedmetadata", onMeta);
+      el.removeEventListener("durationchange", onMeta);
+      el.removeEventListener("play", onPlay);
+      el.removeEventListener("pause", onPause);
       el.removeEventListener("ended", onEnd);
     };
   }, []);
