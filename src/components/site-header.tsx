@@ -19,6 +19,8 @@ export function SiteHeader() {
         <button
           type="button"
           className="min-h-11 px-2 text-xs uppercase tracking-[0.22em] md:hidden"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          aria-controls="mobile-navigation"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
@@ -33,7 +35,7 @@ export function SiteHeader() {
         </nav>
       </div>
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-[#e7e1d4]/10 px-5 py-3 md:hidden">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" className="flex flex-col gap-1 border-t border-[#e7e1d4]/10 px-5 py-3 md:hidden">
           {links.map((link) => (
             <a key={link.href} href={link.href} className="min-h-11 py-3 text-sm uppercase tracking-[0.18em]" onClick={() => setOpen(false)}>
               {link.label}

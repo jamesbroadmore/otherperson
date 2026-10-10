@@ -165,7 +165,7 @@ function documentHtml(text: string) {
 }
 
 function fileSlug(name: string) {
-  const slug = name.trim().replace(/[^\w\-]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+  const slug = name.trim().replace(/[^\w-]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
   return slug || "performer";
 }
 

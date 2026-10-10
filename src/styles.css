@@ -7,6 +7,7 @@
   }
   html {
     scroll-behavior: smooth;
+    background: #0c0b09;
   }
   body {
     margin: 0;
@@ -14,6 +15,20 @@
     color: #e7e1d4;
     font-family: "Outfit", system-ui, sans-serif;
     font-weight: 340;
+    line-height: 1.5;
+  }
+  button,
+  a,
+  input {
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, opacity 180ms ease, transform 180ms ease;
+  }
+  button:not(:disabled):hover,
+  a:hover {
+    opacity: 0.78;
+  }
+  button:not(:disabled):active,
+  a:active {
+    transform: translateY(1px);
   }
   ::selection {
     background: #c4a574;
@@ -31,4 +46,17 @@
 @theme {
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Outfit", system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
