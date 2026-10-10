@@ -44,7 +44,7 @@ function Home() {
       <section id="top" className="relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-end px-5 pb-16 pt-16 md:px-10 md:pb-20">
         <p className="mb-6 text-[11px] uppercase tracking-[0.32em] text-[#c4a574]">Podcast · Literary release · Perth</p>
         <h1 className="max-w-5xl font-display text-[14vw] leading-[0.86] font-medium tracking-[-0.03em] md:text-[7.4rem]">
-          The only person in the room
+          The Only Person in the Room
         </h1>
         <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <p className="max-w-md text-lg leading-snug text-[#e7e1d4]/80">

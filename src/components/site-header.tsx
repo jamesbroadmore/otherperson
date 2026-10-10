@@ -14,7 +14,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-30 border-b border-[#f0ece2]/10 bg-[#10100f]/95 backdrop-blur">
       <div className="flex items-center justify-between px-5 py-4 md:px-10">
         <Link to="/" className="font-display text-sm tracking-[0.02em] text-[#f0ece2]" onClick={() => setOpen(false)}>
-          The only person
+          The Only Person in the Room
         </Link>
         <button
           type="button"

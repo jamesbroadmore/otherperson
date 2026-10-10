@@ -26,6 +26,14 @@
   a:hover {
     opacity: 0.78;
   }
+  button:not(:disabled):focus-visible,
+  a:focus-visible,
+  input:focus-visible {
+    opacity: 1;
+  }
+  input::placeholder {
+    opacity: 1;
+  }
   button:not(:disabled):active,
   a:active {
     transform: translateY(1px);
