@@ -176,7 +176,7 @@ function saveFile(filename: string, contents: string, type: string) {
   a.href = url;
   a.download = filename;
   a.click();
-  URL.revokeObjectURL(url);
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function ReleasePage() {
@@ -216,6 +216,7 @@ function ReleasePage() {
       setNotes(["The print window was blocked. Download the release and print that file."]);
       return;
     }
+    w.opener = null;
     w.document.write(documentHtml(doc));
     w.document.close();
     w.focus();
