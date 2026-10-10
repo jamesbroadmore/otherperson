@@ -126,11 +126,11 @@ function SarahEpisode() {
           <p className="mt-5 max-w-xl text-[#e7e1d4]/75">Content note. Anxiety, repetitive checking, and disrupted sleep. A back garden, cold tea, and a chair that thinks it has a job.</p>
           <div className="mt-8 border border-[#e7e1d4]/15 p-4">
             <audio ref={audio} src="https://bcd4a909db0d.jellypod.com/episodes/02ee6280-1c89-4e17-ab8c-e6af6bc1f455" preload="metadata" />
-            <div className="flex items-center gap-4">
-              <button type="button" onClick={toggle} className="min-h-11 bg-[#e7e1d4] px-5 text-xs uppercase tracking-[0.18em] text-[#14110c]">
+            <div className="flex items-center justify-between gap-4">
+              <button type="button" onClick={toggle} className="min-h-11 min-w-24 bg-[#e7e1d4] px-5 text-xs uppercase tracking-[0.18em] text-[#14110c]" aria-label={playing ? "Pause episode" : "Play episode"}>
                 {playing ? "Pause" : "Play"}
               </button>
-              <span className="text-sm tabular-nums text-[#e7e1d4]/70">{format(time)} / {format(length)}</span>
+              <span className="text-sm tabular-nums text-[#e7e1d4]/70" aria-live="off">{format(time)} / {format(length)}</span>
             </div>
             {audioError && <p className="mt-3 text-sm text-[#c4a574]">{audioError}</p>}
             <div className="mt-5 border-l-2 border-[#c4a574] pl-4" aria-live="polite" aria-label="Current caption">
