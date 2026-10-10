@@ -36,7 +36,7 @@ function Home() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#10100f] pb-24 text-[#f0ece2]">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#10100f] pb-24 text-[#f0ece2] selection:bg-[#c4a574] selection:text-[#14110c]">
       <div className="pointer-events-none fixed inset-0 opacity-[0.07] mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.55'/></svg>\")" }} />
 
       <SiteHeader />

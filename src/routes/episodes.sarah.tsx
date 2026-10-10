@@ -114,7 +114,7 @@ function SarahEpisode() {
   const caption = lines[captionIndex];
 
   return (
-    <main className="min-h-screen bg-[#0c0b09] pb-24 text-[#e7e1d4]">
+    <main className="min-h-screen bg-[#10100f] pb-24 text-[#e7e1d4] selection:bg-[#c4a574] selection:text-[#14110c]">
       <SiteHeader />
 
       <section className="grid gap-8 px-5 pb-10 md:grid-cols-12 md:px-10 md:pt-6">
