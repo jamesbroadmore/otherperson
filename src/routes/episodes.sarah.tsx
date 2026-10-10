@@ -6,7 +6,6 @@ import { SiteBottomNav } from "@/components/site-bottom-nav";
 export const Route = createFileRoute("/episodes/sarah")({ component: SarahEpisode });
 
 const lines: { who: "Adam" | "Sarah" | "Clipboard"; text: string }[] = [
-  { who: "Adam", text: "We're in Sarah's back garden. Late afternoon, cold tea, moss asleep on her foot, and behind her left shoulder, an empty chair." },
   { who: "Clipboard", text: "Occupied in an advisory capacity." },
   { who: "Sarah", text: "Squatting with stationery." },
   { who: "Sarah", text: "Clipboard. Disappointed face. Never taken a day off. Thinks that's something to boast about." },
@@ -125,7 +124,12 @@ function SarahEpisode() {
           <h1 className="mt-3 font-display text-5xl leading-[0.9] md:text-7xl">The Clipboard</h1>
           <p className="mt-5 max-w-xl text-[#e7e1d4]/75">Content note. Anxiety, repetitive checking, and disrupted sleep. A back garden, cold tea, and a chair that thinks it has a job.</p>
           <div className="mt-8 border border-[#e7e1d4]/15 p-4">
-            <audio ref={audio} src="https://bcd4a909db0d.jellypod.com/episodes/02ee6280-1c89-4e17-ab8c-e6af6bc1f455" preload="metadata" />
+            <audio
+              ref={audio}
+              src="https://bcd4a909db0d.jellypod.com/episodes/02ee6280-1c89-4e17-ab8c-e6af6bc1f455"
+              preload="metadata"
+              onError={() => setAudioError("The recording is unavailable right now. Try again shortly.")}
+            />
             <div className="flex items-center justify-between gap-4">
               <button type="button" onClick={toggle} className="min-h-11 min-w-24 bg-[#e7e1d4] px-5 text-xs uppercase tracking-[0.18em] text-[#14110c]" aria-label={playing ? "Pause episode" : "Play episode"}>
                 {playing ? "Pause" : "Play"}

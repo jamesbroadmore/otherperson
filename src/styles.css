@@ -7,12 +7,12 @@
   }
   html {
     scroll-behavior: smooth;
-    background: #0c0b09;
+    background: #10100f;
   }
   body {
     margin: 0;
-    background: #0c0b09;
-    color: #e7e1d4;
+    background: #10100f;
+    color: #f0ece2;
     font-family: "Outfit", system-ui, sans-serif;
     font-weight: 340;
     line-height: 1.5;
@@ -25,6 +25,14 @@
   button:not(:disabled):hover,
   a:hover {
     opacity: 0.78;
+  }
+  button:not(:disabled):focus-visible,
+  a:focus-visible,
+  input:focus-visible {
+    opacity: 1;
+  }
+  input::placeholder {
+    opacity: 1;
   }
   button:not(:disabled):active,
   a:active {
