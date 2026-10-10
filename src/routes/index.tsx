@@ -31,8 +31,12 @@ function Home() {
   function join(e: React.FormEvent) {
     e.preventDefault();
     if (!email.includes("@")) return;
-    localStorage.setItem("opitr-list", email);
-    setSaved(true);
+    try {
+      localStorage.setItem("opitr-list", email.trim());
+      setSaved(true);
+    } catch {
+      setSaved(false);
+    }
   }
 
   return (
