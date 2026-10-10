@@ -211,7 +211,7 @@ function ReleasePage() {
 
   function printDoc() {
     if (!doc) return;
-    const w = window.open("", "_blank");
+    const w = window.open("", "_blank", "noopener,noreferrer");
     if (!w) {
       setNotes(["The print window was blocked. Download the release and print that file."]);
       return;

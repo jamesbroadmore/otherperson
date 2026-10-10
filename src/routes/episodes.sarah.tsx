@@ -125,6 +125,7 @@ function SarahEpisode() {
 
   const captionIndex = length > 0 ? Math.min(lines.length - 1, Math.floor((time / length) * lines.length)) : 0;
   const caption = lines[captionIndex];
+  const progress = length > 0 ? Math.round((time / length) * 100) : 0;
 
   return (
     <main className="min-h-screen bg-[#10100f] pb-24 text-[#e7e1d4] selection:bg-[#c4a574] selection:text-[#14110c]">
@@ -151,8 +152,12 @@ function SarahEpisode() {
             </div>
             {audioError && <p className="mt-3 text-sm text-[#c4a574]">{audioError}</p>}
             <div className="mt-5 border-l-2 border-[#c4a574] pl-4" aria-live="polite" aria-label="Current caption">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#c4a574]">{caption.who}</p>
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#c4a574]">{caption.who}</p>
+                <p className="text-[10px] uppercase tracking-[0.14em] text-[#e7e1d4]/45">{progress}% through</p>
+              </div>
               <p className="mt-1 text-base leading-relaxed text-[#e7e1d4]/90">{caption.text}</p>
+              <p className="mt-2 text-xs leading-relaxed text-[#e7e1d4]/45">Caption timing is an approximate reading guide for this preview.</p>
             </div>
             <input
               className="mt-4 w-full accent-[#c4a574]"
@@ -161,7 +166,8 @@ function SarahEpisode() {
               max={length || 0}
               step={0.1}
               value={Math.min(time, length || 0)}
-              aria-label="Seek"
+              aria-label="Seek through episode"
+              aria-valuetext={`${format(time)} of ${format(length)}`}
               onChange={(e) => seek(Number(e.target.value))}
             />
             <div className="mt-4 flex items-center gap-2">
