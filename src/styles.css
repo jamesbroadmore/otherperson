@@ -7,12 +7,12 @@
   }
   html {
     scroll-behavior: smooth;
-    background: #0c0b09;
+    background: #10100f;
   }
   body {
     margin: 0;
-    background: #0c0b09;
-    color: #e7e1d4;
+    background: #10100f;
+    color: #f0ece2;
     font-family: "Outfit", system-ui, sans-serif;
     font-weight: 340;
     line-height: 1.5;

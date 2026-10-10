@@ -75,7 +75,7 @@ function documentText(f: Fields, signedOn: string) {
   const credit = f.credit.trim() || "No public credit";
   const session = f.session.trim() || "dates to be agreed";
   return `VOLUNTEER PERFORMER RELEASE
-The Other Person in the Room
+The Only Person in the Room
 Draft for a Western Australian volunteer voice contribution. Not legal advice.
 
 Date of signing: ${signedOn}
@@ -87,7 +87,7 @@ Email: ${f.email.trim()}
 Phone: ${f.phone.trim() || "Not given"}
 Credit name: ${credit}
 
-Producer: Adam James, host of the podcast The Other Person in the Room, Perth, Western Australia.
+Producer: Adam James, host of the podcast The Only Person in the Room, Perth, Western Australia.
 
 1. VOLUNTEER — NO FINANCIAL REWARD
 The Performer takes part of their own free will, as a volunteer. There is no fee, wage, salary, superannuation, royalty, profit share, gift, or other financial reward for the performance or for signing this release. Nothing in this release creates employment, a contract for services, or a right to payment under the Fair Work Act 2009 (Cth) or any other law. The Performer may stop volunteering for future sessions at any time. Recordings already made, and this release, continue to apply to those recordings.
@@ -95,7 +95,7 @@ The Performer takes part of their own free will, as a volunteer. There is no fee
 A receipted out-of-pocket expense is payable only if the Producer agrees to it in writing before the expense is incurred. Repayment of that expense is not a fee for the performance.
 
 2. WHAT IS BEING RECORDED
-The Performer will give a voice performance for The Other Person in the Room.
+The Performer will give a voice performance for The Only Person in the Room.
 Role or episode: ${f.role.trim()}
 Session: ${session}
 If a session is also filmed, this release covers the Performer's image in that recording to the same extent as the voice.

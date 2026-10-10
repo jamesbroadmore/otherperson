@@ -11,10 +11,10 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-[#e7e1d4]/10 bg-[#0c0b09]/95 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-[#f0ece2]/10 bg-[#10100f]/95 backdrop-blur">
       <div className="flex items-center justify-between px-5 py-4 md:px-10">
-        <Link to="/" className="font-display text-sm tracking-wide" onClick={() => setOpen(false)}>
-          The other person
+        <Link to="/" className="font-display text-sm tracking-[0.02em] text-[#f0ece2]" onClick={() => setOpen(false)}>
+          The only person
         </Link>
         <button
           type="button"

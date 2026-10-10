@@ -36,7 +36,7 @@ function Home() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#0c0b09] pb-24 text-[#e7e1d4]">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#10100f] pb-24 text-[#f0ece2]">
       <div className="pointer-events-none fixed inset-0 opacity-[0.07] mix-blend-overlay" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.55'/></svg>\")" }} />
 
       <SiteHeader />
@@ -44,7 +44,7 @@ function Home() {
       <section id="top" className="relative flex min-h-[calc(100svh-4.5rem)] flex-col justify-end px-5 pb-16 pt-16 md:px-10 md:pb-20">
         <p className="mb-6 text-[11px] uppercase tracking-[0.32em] text-[#c4a574]">Podcast · Literary release · Perth</p>
         <h1 className="max-w-5xl font-display text-[14vw] leading-[0.86] font-medium tracking-[-0.03em] md:text-[7.4rem]">
-          The other person in the room
+          The only person in the room
         </h1>
         <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <p className="max-w-md text-lg leading-snug text-[#e7e1d4]/80">
@@ -112,7 +112,7 @@ function Home() {
           <p className="mt-6 max-w-md text-[#e7e1d4]/75">Literary non-fiction. Interview. Personal essay. The diagnosis describes the experience. It does not get to become the identity.</p>
         </div>
         <div className="border border-[#e7e1d4]/15 p-6 md:p-10">
-          <p className="font-display text-2xl">The Other Person in the Room</p>
+          <p className="font-display text-2xl">The Only Person in the Room</p>
           <p className="mt-2 text-sm text-[#e7e1d4]/60">Hosted by Adam James</p>
           <dl className="mt-8 grid grid-cols-2 gap-y-4 text-sm">
             <dt className="text-[#e7e1d4]/45">Form</dt>
