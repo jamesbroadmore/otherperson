@@ -6,7 +6,6 @@ import { SiteBottomNav } from "@/components/site-bottom-nav";
 export const Route = createFileRoute("/episodes/sarah")({ component: SarahEpisode });
 
 const lines: { who: "Adam" | "Sarah" | "Clipboard"; text: string }[] = [
-  { who: "Adam", text: "We're in Sarah's back garden. Late afternoon, cold tea, moss asleep on her foot, and behind her left shoulder, an empty chair." },
   { who: "Clipboard", text: "Occupied in an advisory capacity." },
   { who: "Sarah", text: "Squatting with stationery." },
   { who: "Sarah", text: "Clipboard. Disappointed face. Never taken a day off. Thinks that's something to boast about." },
