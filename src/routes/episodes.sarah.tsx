@@ -130,7 +130,7 @@ function SarahEpisode() {
           <h1 className="mt-3 font-display text-5xl leading-[0.9] md:text-7xl">The Clipboard</h1>
           <p className="mt-5 max-w-xl text-[#e7e1d4]/75">Content note. Anxiety, repetitive checking, and disrupted sleep. A back garden, cold tea, and a chair that thinks it has a job.</p>
           <div className="mt-8 border border-[#e7e1d4]/15 p-4">
-            <audio ref={audio} src="/audio/ep01-sarah.mp3" preload="metadata" />
+            <audio ref={audio} src="https://bcd4a909db0d.jellypod.com/episodes/02ee6280-1c89-4e17-ab8c-e6af6bc1f455" preload="metadata" />
             <div className="flex items-center gap-4">
               <button type="button" onClick={toggle} className="min-h-11 bg-[#e7e1d4] px-5 text-xs uppercase tracking-[0.18em] text-[#14110c]">
                 {playing ? "Pause" : "Play"}
