@@ -127,7 +127,7 @@ function SarahEpisode() {
         <img src="/ep01-cover.jpg" alt="Episode one cover. A clipboard labelled Sarah, notes not answers, beside a microphone." className="w-full border border-[#e7e1d4]/10 md:col-span-5" />
         <div className="flex flex-col justify-end md:col-span-7">
           <p className="text-[11px] uppercase tracking-[0.28em] text-[#c4a574]">Sarah + Anxiety</p>
-          <h1 className="mt-3 font-display text-5xl leading-[0.9] md:text-7xl">Sarah & the Clipboard</h1>
+          <h1 className="mt-3 font-display text-5xl leading-[0.9] md:text-7xl">The Clipboard</h1>
           <p className="mt-5 max-w-xl text-[#e7e1d4]/75">Content note. Anxiety, repetitive checking, and disrupted sleep. A back garden, cold tea, and a chair that thinks it has a job.</p>
           <div className="mt-8 border border-[#e7e1d4]/15 p-4">
             <audio ref={audio} src="/audio/ep01-sarah.mp3" preload="metadata" />

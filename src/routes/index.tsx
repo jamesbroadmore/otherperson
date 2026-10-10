@@ -6,7 +6,7 @@ import { SiteBottomNav } from "@/components/site-bottom-nav";
 export const Route = createFileRoute("/")({ component: Home });
 
 const episodes = [
-  { n: "01", title: "Sarah & the Clipboard", who: "Sarah", with: "Anxiety", line: "You've put the chair there again.", live: true },
+  { n: "01", title: "The Clipboard", who: "Sarah", with: "Anxiety", line: "You've put the chair there again.", live: true },
   { n: "02", title: "The Landlord", who: "Marcus", with: "Depression", line: "Tired was the cover story. The lease was already signed." },
   { n: "03", title: "The Security Guard", who: "Elena", with: "Trauma", line: "People who say I'm still here are usually about to stop checking." },
   { n: "04", title: "The Weather", who: "David", with: "Bipolar", line: "You don't apologise for electricity." },
